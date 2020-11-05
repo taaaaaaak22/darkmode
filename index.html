@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div>
+    <input type="checkbox" id="checkbox">ダークモード</input>
+    <h1>タイトル</h1>
+    <p>テキストテキストテキストテキスト<a href="/">リンクテキスト</a>テキストテキスト</p>
+    <img src="./dammy.png">
+  </div>
+
+  <script>
+   const checkbox = document.querySelector('#checkbox')
+   const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+   if (isDark) {
+    checkbox.checked = true
+   }
+
+   checkbox.addEventListener('change', () => {
+     if (checkbox.checked) {
+       document.body.classList.remove("light");
+       document.body.classList.add("dark");
+     } else {
+       document.body.classList.remove("dark");
+       document.body.classList.add("light");
+     }
+    })
+  </script>
+</body>
+</html>

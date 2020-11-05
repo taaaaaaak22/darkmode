@@ -1,0 +1,33 @@
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  a {
+    color: blue;
+  }
+}
+body.light {
+  background-color: #fff;
+  color: #000;
+}
+body.light a {
+  color: blue;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+  a {
+    color: cyan;
+  }
+}
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+body.dark a {
+  color: cyan;
+}
